@@ -416,7 +416,7 @@ en:
     all_recordings: All Recordings
     email: Email Recording
     error: There was an error retrieving %{count} recording(s)
-    no_recordings: This room has no %{inject}recordings.
+    no_recordings: No %{inject}recordings.
     no_user_recordings: You currently have no recordings.
     no_matched_recordings: No %{inject} recordings match your search.
     recorded_on: Recorded on %{date}
@@ -477,7 +477,7 @@ en:
     enter_the_access_code: Enter the room's access code
     invalid_provider: You have entered an invalid url. Please check the url and try again.
     invited: You have been invited to join
-    invite_participants: Invite Participants
+    invite_participants: Invite People
     join: Join
     last_session: Last session on %{session}
     login: Enter
@@ -493,7 +493,7 @@ en:
       recent_rooms: Go To a Recently Joined Room
       title: Join a Room
     no_sessions: This room has no sessions, yet!
-    recordings: Room Recordings
+    recordings: Recordings
     room_limit: You have reached the maximum number of rooms allowed
     room_limit_exceeded: You have exceeded the number of rooms allowed. Please delete %{difference} room(s) to access this room.
     sessions: Sessions
