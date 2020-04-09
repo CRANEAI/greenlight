@@ -13,6 +13,121 @@
 # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 %>
 
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(PaleVioletRed, LightPink);
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.card, .card2 {
+  width: 350px;
+  box-shadow: none;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  transition: 0.3s ease-out all;
+}
+.card:hover, .card2:hover {
+  -webkit-box-shadow: -1px -1px 16px -4px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: -1px -1px 16px -4px rgba(0, 0, 0, 0.44);
+  box-shadow: -1px -1px 16px -4px rgba(0, 0, 0, 0.44);
+  transition: 0.3s ease-out all;
+}
+
+.card {
+  transition: 0.3s ease-out all;
+}
+
+.card2 {
+  opacity: 0.8;
+  transition: 0.3s ease-out all;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  background-size: cover;
+  background-position-y: center;
+  height: 200px;
+}
+.image .alert {
+  align-self: end;
+  margin: 10px;
+  background-color: PaleVioletRed;
+  color: white;
+  padding: 6px 8px;
+  font-size: 10px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.des {
+  padding: 12px;
+}
+.des .subtitle {
+  color: DarkGray;
+}
+.des h1 {
+  margin: 5px 0;
+}
+.des h1 span {
+  font-weight: normal;
+  margin-left: 10px;
+  color: SeaGreen;
+}
+.des p {
+  line-height: 22px;
+}
+
+hr {
+  border: 1px solid Gainsboro;
+  opacity: 0.3;
+}
+
+.adding, .ordered {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0 12px 12px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.adding {
+  background-color: white;
+  color: grey;
+}
+.adding:hover {
+  background-color: LavenderBlush;
+  color: black;
+  cursor: pointer;
+}
+
+.ordered {
+  background-color: PaleVioletRed;
+  color: white;
+  cursor: pointer;
+}
+
+</style>
+
 
 <div class="container mt-8 mb-6 text-center">
 
