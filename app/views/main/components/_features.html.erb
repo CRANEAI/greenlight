@@ -126,8 +126,15 @@ hr {
     color: #fff;
     text-align: left;
 }
-.no-padout{
-  background: #202226;
+
+div.radi-2 .card {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+div.radi-1 .card {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px !important;
+    background: #202226;
 }
 </style>
 
@@ -137,11 +144,13 @@ hr {
 
 <div class="row">
 
-  <div class="col-3 no-padout">
-  
+  <div class="col-3 radi-1">
+    <div class="card">
+      
+    </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-4 pl-0 radi-2">
     <div id="card" class="card">
 
    
