@@ -380,9 +380,9 @@ img.header-brand-img {
 
     <div class="profile-card__cnt js-profile-cnt">
       <div class="profile-card__name">
-      <%= t("name") %>
-      <%= t("email") %>
-      </div>
+      <%= @user.name.first %>
+      <%= @user.name.last %>
+      <%= @user.email %>
       <div class="profile-card__txt">Really cool Bio <strong>Developer</strong></div>
       <div class="profile-card-loc">
         <span class="profile-card-loc__icon">
