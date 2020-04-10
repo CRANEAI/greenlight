@@ -68,6 +68,7 @@ class UsersController < ApplicationController
 
   # GET /profile/:user_uid
   def view_profile
+    @user = User.find_by(uid: params[:user_uid])
   end  
     
 
