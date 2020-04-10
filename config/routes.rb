@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create', as: :create_user
   get '/ldap_signin', to: 'sessions#ldap_signin', as: :ldap_signin
 
+  # NEW RH profile routes
+  get '/profile/:user_uid', to: 'users#view_profile', as: :view_profile 
+
   # Redirect to terms page
   match '/terms', to: 'users#terms', via: [:get, :post]
 

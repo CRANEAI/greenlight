@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   include Recorder
   include Rolify
 
-  before_action :find_user, only: [:edit, :change_password, :delete_account, :update]
+  before_action :find_user, only: [:edit, :change_password, :delete_account, :update, :view_profile]
   before_action :ensure_unauthenticated_except_twitter, only: [:create]
   before_action :check_user_signup_allowed, only: [:create]
   before_action :check_admin_of, only: [:edit, :change_password, :delete_account]
@@ -64,6 +64,13 @@ class UsersController < ApplicationController
 
     redirect_to root_path
   end
+
+
+  # GET /profile/:user_uid
+  def view_profile
+    redirect_to root_path unless current_user
+  end  
+    
 
   # GET /u/:user_uid/edit
   def edit
