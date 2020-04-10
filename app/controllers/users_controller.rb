@@ -68,7 +68,7 @@ class UsersController < ApplicationController
 
   # GET /profile/:user_uid
   def view_profile
-    redirect_to root_path unless current_user
+    redirect_to root_path
   end  
     
 
