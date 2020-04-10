@@ -55,7 +55,6 @@
   height: 150px;
   margin-left: auto;
   margin-right: auto;
-  transform: translateY(-50%);
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -353,9 +352,7 @@
   border-radius: 12px;
   transition: all .3s;
 }
-.profile-card.js-profile-card {
-    margin-top: 5rem;
-}
+
 img.header-brand-img {
     height: 2.5rem;
     padding-top: 0px;
@@ -366,13 +363,15 @@ img.header-brand-img {
 }
 </style>
 
-<div class="container-fluid pt-6">
-
-  <div class="row">
+<div class="container-fluid pt-0">
 
 
+<div class="row">
+    <div class="col-3">
+    
 
-  <div class="profile-card js-profile-card">
+
+    <div class="profile-card js-profile-card">
     <div class="profile-card__img">
       <img src="https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg" alt="profile card">
     </div>
@@ -440,7 +439,13 @@ img.header-brand-img {
       <div class="profile-card__overlay js-message-close"></div>
     </div>
 
-  </div>
+    
+
+
+    </div><!-- //col-3 -->
+</div><!-- //row -->
+
+
 
 
   </div>
