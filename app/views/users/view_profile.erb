@@ -13,8 +13,10 @@
 # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 %>
 <style>
-
-
+div.wrapper {
+    background: #f3f3f3 !important;
+    background-image: none !important;
+}
 .icon {
   display: inline-block;
   width: 1em;
@@ -360,9 +362,7 @@ img.header-brand-img {
     height: 65px;
     background: linear-gradient(140.88deg,#251345 40.17%,#0f0e5c 88.49%);
 }
-.wrapper{
-    background: #f3f3f;
-}
+
 </style>
 
 <div class="container-fluid pt-0">
@@ -379,7 +379,9 @@ img.header-brand-img {
     </div>
 
     <div class="profile-card__cnt js-profile-cnt">
-      <div class="profile-card__name">Ryan Hickman</div>
+      <div class="profile-card__name">
+      <%= t("settings.account.fullname") %>
+      </div>
       <div class="profile-card__txt">Really cool Bio <strong>Developer</strong></div>
       <div class="profile-card-loc">
         <span class="profile-card-loc__icon">
