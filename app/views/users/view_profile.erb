@@ -14,7 +14,7 @@
 %>
 <style>
 .wrapper{
-    background: #000;
+    background: #fff;
 }
 
 .icon {
@@ -27,14 +27,15 @@
 }
 
 .profile-card {
-  width: 100%;
-  min-height: 460px;
-  margin: auto;
-  box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
-  background: #fff;
-  border-radius: 12px;
-  max-width: 700px;
-  position: relative;
+    width: 100%;
+    min-height: 460px;
+    margin: auto;
+    background: #fff;
+    border-radius: 0px;
+    max-width: 700px;
+    position: relative;
+    margin-left: 0px;
+    border-right: 1px solid #0f0e5b59;
 }
 .profile-card.active .profile-card__cnt {
   filter: blur(6px);
@@ -355,9 +356,17 @@
 .profile-card.js-profile-card {
     margin-top: 5rem;
 }
+img.header-brand-img {
+    height: 2.5rem;
+    padding-top: 0px;
+}
+.header {
+    height: 65px;
+    background: linear-gradient(140.88deg,#251345 40.17%,#0f0e5c 88.49%);
+}
 </style>
 
-<div class="container pt-6">
+<div class="container-fluid pt-6">
 
   <div class="row">
 
