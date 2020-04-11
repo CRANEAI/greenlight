@@ -61,6 +61,34 @@ input#create-room-submit {
   margin-top: 4rem;
 }
 
+
+div.fu{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  width: 500px;
+  height: 200px;
+  border: 4px dashed #fff;
+}
+div.fu p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: #ffffff;
+  font-family: Arial;
+}
+div.fu input{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
 </style>
 
 <div class="modal fade" id="createRoomModal" tabindex="-1" role="dialog">
@@ -70,7 +98,7 @@ input#create-room-submit {
 
 
       <div class="row">
-      <div class="col-6 mx-auto">
+      <div class="col-5 mx-auto">
 
 
         <div class="card-body p-sm-6">
@@ -78,6 +106,14 @@ input#create-room-submit {
             <h3 class="create-only"><%= t("modal.create_room.title") %></h3>
             <h3 class="update-only"><%= t("modal.room_settings.title") %></h3>
           </div>
+
+
+
+          <div class="fu">
+            <input type="file">
+            <p>Upload an image to appear as your event banner</p>
+          </div>
+
 
           <%= form_for(:room, url: rooms_path) do |f| %>
             <h2>What are you going to talk about?</h2>
