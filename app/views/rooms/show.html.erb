@@ -282,6 +282,15 @@ ul.nav-pills {
     max-width: 30%;
     margin: auto;
 }
+.radi-1 .card {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px;
+    background: #0f0f0f;
+}
+.card {
+  background: #0f0f0f;
+  box-shadow: none;
+}
 </style>
 
 
@@ -319,7 +328,8 @@ ul.nav-pills {
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
   
-  
+  <div class="row">
+  </div><!-- // row -->
   
   </div>
   <!-- // home -->
@@ -327,6 +337,57 @@ ul.nav-pills {
 
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
   
+  <div class="row">
+  <div class="col-4 pl-0 pr-0">
+  <cue class="active appcues-actions-hidden">
+      <section>
+          <div class="canvas">
+              <div class="row-container">
+                  <div class="row" style="display: inline-block; width: 100%;">
+                      <div class="zone-container" style="display: inline-block; width: 100%; float: left;">
+                          <div class="zone">
+                              <div class="zone-content">
+                                  <div class="rich-text" style="margin-top: 20px;">
+                                      <style>
+                                          .rich-text strong {
+                                              color: inherit !important;
+                                          }
+                                      </style>
+                                      <div>
+                                          <h2 style="text-align: center;">Want to create your own event?</h2>
+                                          <p>
+                                          It's easy. Doesn't take much.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row-container">
+                  <div class="row" style="display: inline-block; width: 100%;">
+                      <div class="zone-container" style="display: inline-block; width: 100%; float: left;">
+                          <div class="zone">
+                              <div class="zone-content">
+                                  <div class="button-wrapper appcues-actions-right" style="width: 100%; text-align: center; margin-top: 5px; margin-bottom: 5px;">
+                                      <a class="appcues-button-success appcues-button" 
+                                      data-toggle="modal" data-target="#createRoomModal"
+                                          style="text-align: center; padding: 8px 18px; background-color: rgb(71, 207, 115); color: rgb(8, 8, 8); text-decoration: none;">Create an Event</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="appcues-actions hidden"></div>
+  </cue>
+  </div><!-- //col -->
+  
+  </div><!-- // row -->
+
   </div>
   <!-- //profile me -->
 </div>
@@ -357,7 +418,7 @@ ul.nav-pills {
 
 
 
-  <div class="col-3 pl-0 radi-2">
+  <div class="col-4 pl-0 radi-2">
     <div id="card" class="card">
 
    
@@ -434,7 +495,7 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
 
 
 
-<div class="col-3 pl-0 radi-2">
+<div class="col-4 pl-0 radi-2">
     <div id="card" class="card">
 
    
@@ -509,63 +570,9 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
   <!-- //upcoming -->
 
 
-<div class="col-4 pl-0 pr-0">
 
 
 
-<cue class="active appcues-actions-hidden">
-    <section>
-        <div class="canvas">
-            <div class="row-container">
-                <div class="row" style="display: inline-block; width: 100%;">
-                    <div class="zone-container" style="display: inline-block; width: 100%; float: left;">
-                        <div class="zone">
-                            <div class="zone-content">
-                                <div class="rich-text" style="margin-top: 20px;">
-                                    <style>
-                                        .rich-text strong {
-                                            color: inherit !important;
-                                        }
-                                    </style>
-                                    <div>
-                                        <h2 style="text-align: center;">Want to create your own event?</h2>
-                                        <p>
-                                        It's easy. Doesn't take much.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-container">
-                <div class="row" style="display: inline-block; width: 100%;">
-                    <div class="zone-container" style="display: inline-block; width: 100%; float: left;">
-                        <div class="zone">
-                            <div class="zone-content">
-                                <div class="button-wrapper appcues-actions-right" style="width: 100%; text-align: center; margin-top: 5px; margin-bottom: 5px;">
-                                    <a class="appcues-button-success appcues-button" 
-                                    data-toggle="modal" data-target="#createRoomModal"
-                                        style="text-align: center; padding: 8px 18px; background-color: rgb(71, 207, 115); color: rgb(8, 8, 8); text-decoration: none;">Create an Event</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="appcues-actions hidden"></div>
-</cue>
-
-
-
-
-
-
-
-  </div>
 </div>
 
   <!-- // top panel -->
