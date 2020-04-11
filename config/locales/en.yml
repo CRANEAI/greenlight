@@ -338,7 +338,7 @@ en:
       free_delete: You will be free to delete this live event at any time.
       name_placeholder: Live Event Name...
       not_blank: Name cannot be blank.
-      title: Create
+      title: Host a Live Event
     delete_account:
       confirm: Are you sure you want to delete this account?
       delete: I'm sure, delete this account.
