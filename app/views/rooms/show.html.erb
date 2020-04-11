@@ -325,7 +325,21 @@ input#invite-url {
 }
 
 div#room-title {
-    max-height: 150px;
+    max-height: 160px;
+}
+a#copy {
+  background: linear-gradient(140.88deg,#a62cf4 1.17%,#8127fd 88.49%);
+  height: 96%;
+  font-size: 1rem;
+}
+
+i.fas {
+  background: transparent !important;
+  padding-right: 5px;
+}
+
+i.fas:hover {
+  background: transparent;
 }
 </style>
 
@@ -568,7 +582,7 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
       <% else %>
       
         <h1 contenteditable=false id="user-text" class="display-3 text-left mb-3 font-weight-400"><%= @room.name %></h1>
-        <a><i id="edit-room" class="fa fa-edit align-top home-indicator ml-2" data-edit-room="<%= @room.uid %>"></i></a>
+        <a><i id="edit-room" class="fa fa-edit align-top home-indicator ml-0" data-edit-room="<%= @room.uid %>"></i></a>
       <% end %>
     </div>
     <!--
