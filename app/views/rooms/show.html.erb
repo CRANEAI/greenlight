@@ -636,31 +636,11 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
   </div>
 </div>
 
-<div id="room_block_container" class="row pt-7 pb-5">
-  <% current_user.ordered_rooms.each do |room| %>
-    <% if current_user.main_room == room %>  
-
-    <% else %>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <%= link_to room do %>
-        <%= render "rooms/components/room_block", room: room %>
-      <% end %>
-    </div>
-    <% end %>
-  <% end %>
-        
-  <% if shared_access_allowed %>
-    <% current_user.shared_rooms.each do |room| %>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <%= link_to room do %>
-          <%= render "rooms/components/shared_room_block", room: room %>
-        <% end %>
-      </div>
-    <% end %>
-  <% end %>
 
 
-</div>
+
+
+
 
 
 
@@ -678,21 +658,32 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
              My Events
               </h3>
               
-                <div class="livedivide">
-                <div class="image" 
-                style='background-image: url("https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80");'
-                >
-                  <span class="alert">
-                  Lead Netowrk
-                  </span>
+
+              <% current_user.ordered_rooms.each do |room| %>
+                <% if current_user.main_room == room %>  
+            
+                <% else %>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <%= link_to room do %>
+                    <%= render "rooms/components/room_block", room: room %>
+                  <% end %>
                 </div>
-                <div class="des">
-                  <span class="subtitle">
-                  Blockchain Networking Group
-                  </span>
-                  <h5>@CryptoKing</h5>
-                </div>
-              </div>
+                <% end %>
+              <% end %>
+                    
+              <% if shared_access_allowed %>
+                <% current_user.shared_rooms.each do |room| %>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <%= link_to room do %>
+                      <%= render "rooms/components/shared_room_block", room: room %>
+                    <% end %>
+                  </div>
+                <% end %>
+              <% end %>
+
+
+
+             
 
 
         </div>
