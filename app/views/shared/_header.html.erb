@@ -52,7 +52,7 @@
 
             <% if current_user.highest_priority_role.get_permission("can_create_rooms") %>
               <% all_rec_page = params[:controller] == "users" && params[:action] == "recordings" ? "active" : "" %>
-              <%= link_to get_user_recordings_path(current_user), class: "px-3 mx-1 mt-1 header-nav #{all_rec_page}" do %>
+              <%= link_to get_user_recordings_path(current_user), class: "px-3 mx-1 mt-1 header-nav hidden #{all_rec_page}" do %>
                 <span class="d-none d-sm-inline-block hidden"><%= t("header.all_recordings") %></span>
               <% end %>
             <% end %>
