@@ -312,6 +312,21 @@ h1#user-text {
 a {
     color: #9d2bf6 !important;
 }
+label.form-label {
+    color: #999697;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+input#invite-url {
+    background: #000;
+    font-size: 1.2rem;
+    height: 45px;
+}
+
+div#room-title {
+    max-height: 150px;
+}
 </style>
 
 
@@ -552,9 +567,6 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
        
       <% else %>
       
-        <span id="user-avatar" class="avatar d-none"><%= current_user.name.first %></span>
-        <%= image_tag(current_user.image, id: "user-image", class: "avatar") %>
-
         <h1 contenteditable=false id="user-text" class="display-3 text-left mb-3 font-weight-400"><%= @room.name %></h1>
         <a><i id="edit-room" class="fa fa-edit align-top home-indicator ml-2" data-edit-room="<%= @room.uid %>"></i></a>
       <% end %>
