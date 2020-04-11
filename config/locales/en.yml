@@ -504,7 +504,7 @@ en:
     remove_shared_access_error: There was an error removing the shared room from your list
     shared_access_success: Room shared successfully
     shared_access_error: There was an error sharing the room
-    start: Start
+    start: Go Live
     unavailable: This room is currently unavailable due to the owner's email not being verified.
     update_settings_error: There was an error updating the live event settings
     update_settings_success: Room settings successfully updated
