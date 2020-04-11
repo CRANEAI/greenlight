@@ -789,6 +789,17 @@ stripe.redirectToCheckout({
 
 <script>
 $(document).ready(() => {
+
+setTimeout(()=>{
+
+
+  $('.livedivide a').each((d,e)=>{
+  let p =  $(e).attr('href')
+  console.log(    p.indexOf('/b')    )
+  if ( p.indexOf('/b') > -1 ) $(e).attr('href', $(e).attr('href') + "#me")
+  })
+
+
   let url = location.href.replace(/\/$/, "");
  
   if (location.hash) {
@@ -812,5 +823,8 @@ $(document).ready(() => {
     newUrl += "/";
     history.replaceState(null, null, newUrl);
   });
+
+  },1000)
+  
 });
 </script>
