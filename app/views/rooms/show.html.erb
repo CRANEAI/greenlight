@@ -462,6 +462,33 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
 <cue class="active appcues-actions-hidden">
     <section>
         <div class="canvas">
+
+          <div class="row">
+            <div class="col-12">
+              <% current_user.ordered_rooms.each do |room| %>
+                <% if current_user.main_room == room %>  
+        
+                <% else %>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <%= link_to room do %>
+                    <%= render "rooms/components/room_block", room: room %>
+                  <% end %>
+                </div>
+                <% end %>
+              <% end %>
+                    
+              <% if shared_access_allowed %>
+                <% current_user.shared_rooms.each do |room| %>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <%= link_to room do %>
+                      <%= render "rooms/components/shared_room_block", room: room %>
+                    <% end %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+
             <div class="row-container">
                 <div class="row" style="display: inline-block; width: 100%;">
                     <div class="zone-container" style="display: inline-block; width: 100%; float: left;">
@@ -583,27 +610,7 @@ style='background-image: url("https://images.unsplash.com/photo-1493666438817-86
     </div>
 
     <div id="room_block_container" class="row pt-7 pb-5">
-      <% current_user.ordered_rooms.each do |room| %>
-        <% if current_user.main_room == room %>  
-
-        <% else %>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <%= link_to room do %>
-            <%= render "rooms/components/room_block", room: room %>
-          <% end %>
-        </div>
-        <% end %>
-      <% end %>
-            
-      <% if shared_access_allowed %>
-        <% current_user.shared_rooms.each do |room| %>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <%= link_to room do %>
-              <%= render "rooms/components/shared_room_block", room: room %>
-            <% end %>
-          </div>
-        <% end %>
-      <% end %>
+     
 
     
     </div>
