@@ -12,11 +12,65 @@
 # You should have received a copy of the GNU Lesser General Public License along
 # with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 %>
+<style>
+.modal-dialog.modal-xl.modal-dialog-centered {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    padding: 0px !important;
+    border-radius: 0px;
+    background: linear-gradient(to right, #24243e, #302b63, #24243e);
+}
+
+.modal-xl .modal-content.text-center {
+    background: transparent;
+}
+}
+h3.create-only {
+    color: #fff;
+    font-size: 3rem;
+    text-align: left;
+}
+h3.input-icon-addon{
+  font-size: 3rem;
+  text-align: left;
+}
+input#create-room-name {
+    background: transparent;
+    text-align: left !important;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.4rem;
+    border-bottom: 1px solid;
+}
+form h2 {
+    color: #9a9a9a;
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+input#create-room-submit {
+    color: #ffffff !important;
+    background: linear-gradient(140.88deg,#a62cf4 1.17%,#8127fd 88.49%);
+    font-size: 1.2rem;
+    padding: 7px 31px;
+    border-radius: 25px;
+}
+
+</style>
 
 <div class="modal fade" id="createRoomModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
     <div class="modal-content text-center">
       <div class="modal-body">
+
+
+      <div class="row">
+      <div class="col-6 mx-auto">
+
+
         <div class="card-body p-sm-6">
           <div class="card-title">
             <h3 class="create-only"><%= t("modal.create_room.title") %></h3>
@@ -24,15 +78,14 @@
           </div>
 
           <%= form_for(:room, url: rooms_path) do |f| %>
+            <h2>What are you going to talk about?</h2>
             <div class="input-icon mb-2">
-              <span class="input-icon-addon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </span>
+            
               <%= f.text_field :name, id: "create-room-name", class: "form-control text-center", value: "", placeholder: t("modal.create_room.name_placeholder"), autocomplete: :off %>
               <div class="invalid-feedback text-left"><%= t("modal.create_room.not_blank") %></div>
             </div>
 
-            <div class="input-icon mb-2">
+            <div class="input-icon mb-2 hidden">
               <span onclick="generateAccessCode()" class="input-icon-addon allow-icon-click cursor-pointer">
                 <i class="fas fa-dice"></i>
               </span>
@@ -42,6 +95,9 @@
                 <i class="far fa-trash-alt"></i>
               </span>
             </div>
+
+
+            <div class="hidden">
 
             <% if Rails.configuration.room_features.include? "mute-on-join" %>
               <label class="custom-switch pl-0 mt-3 mb-3 w-100 text-left d-inline-block">
@@ -75,11 +131,16 @@
               </label>
             <% end %>
 
-            <label id="auto-join-label" class="create-only custom-switch pl-0 mt-3 mb-3 w-100 text-left d-inline-block">
+            <label id="auto-join-label" class="create-only custom-switch pl-0 mt-3 mb-3 w-100 text-left d-inline-block ">
               <span class="custom-switch-description"><%= t("modal.create_room.auto_join") %></span>
               <%= f.check_box :auto_join, class: "custom-switch-input", checked: false %>
               <span class="custom-switch-indicator float-right cursor-pointer"></span>
             </label>
+
+          </div>
+
+
+
           <div class="mt-4">
             <%= f.submit t("modal.create_room.create"), id: "create-room-submit", class: "create-only btn btn-primary btn-block" %>
             <%= f.submit t("modal.room_settings.update"), id: "create-room-submit", class: "update-only btn btn-primary btn-block" %>
@@ -90,6 +151,16 @@
           <p class="create-only"><%= t("modal.create_room.free_delete") %></p>
           <p class="update-only"><%= t("modal.room_settings.footer_text") %></p>
         </div>
+
+
+
+        </div>
+      </div>
+
+
+
+
+
       </div>
     </div>
   </div>
