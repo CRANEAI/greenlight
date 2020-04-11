@@ -25,9 +25,15 @@ style='background-image: url("https://images.unsplash.com/photo-1519699047748-de
 </div>
 <div class="des">
   <span class="subtitle">
-  Blockchain Networking Group
+  <%= room.name %>
   </span>
-  <h5>@CryptoKing</h5>
+  <h5>
+  <% if room.sessions > 0 %>
+    <i><%= t("room.last_session", session: recording_date(room.last_session)) %></i>
+  <% else %>
+    <i><%= t("room.no_sessions") %></i>
+  <% end %>
+  </h5>
 </div>
 
 
