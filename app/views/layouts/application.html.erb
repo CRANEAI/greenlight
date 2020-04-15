@@ -161,6 +161,7 @@ div#room_block_container {
   </head>
 
   <body class="app-background" data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>" data-relative-root="<%= Rails.configuration.relative_url_root || "/" %>">
+    <div id="ameveeapp">
     <%= render "shared/header" %>
 
     <div class="wrapper">
@@ -189,5 +190,6 @@ div#room_block_container {
     </div>
 
     <%= render "shared/footer" %>
+    </div>
   </body>
 </html>
