@@ -152,29 +152,7 @@ div#room_block_container {
   padding-bottom: 5rem;
 }
     </style>
-    <style>
-    .header .avatar{
-      background: #9c2bf6 !important;
-      font-size: 1.5rem;
-    }
-    .header .header-nav.active {
-        color: #fff;
-    }
-    
-    .header .header-nav {
-        font-size: 1.5rem;
-        border-bottom: none !important;
-    }
-    
-    span.text-default.username {
-        font-size: 1.5rem;
-    }
-    
-    div.dropdown a.nav-link.pr-0 {
-        margin-top: 5px;
-        margin-left: 50px;
-    }
-    </style>
+
     <script type="text/javascript">
       // Include the correct translated strings for Javascript
       window.I18n = <%= current_translations.to_json.html_safe %>
@@ -183,7 +161,6 @@ div#room_block_container {
   </head>
 
   <body class="app-background" data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>" data-relative-root="<%= Rails.configuration.relative_url_root || "/" %>">
-    <div id="ameveeapp">
     <%= render "shared/header" %>
 
     <div class="wrapper">
@@ -212,16 +189,5 @@ div#room_block_container {
     </div>
 
     <%= render "shared/footer" %>
-    </div>
-
-
-<script src="https://js.stripe.com/v3/"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://mevee.herokuapp.com/js/vuep.js"></script>
-<script src="https://mevee.herokuapp.com/js/utils.js"></script>
-<script src="https://mevee.herokuapp.com/js/index.js"></script>
-
-
   </body>
 </html>
