@@ -70,7 +70,7 @@
         <% end %>
       </div>
       <div class="col-10 mt-5">
-      <input type="file"  id="aviup" @change="onFileUpload"  />
+      <input type="file"  id="aviup" onchange="onFileUpload"  />
         <%= f.text_field :image, class: "form-control #{form_is_invalid?(@user, :image)}", placeholder: t("settings.account.image_url") %>
       </div>
     </div>
