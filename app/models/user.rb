@@ -34,7 +34,8 @@ class User < ApplicationRecord
 
   has_and_belongs_to_many :roles, join_table: :users_roles
 
-  validates :name, length: { maximum: 256 }, presence: true
+  validates :name, length: { maximum: 256 }, presence: true,
+                    uniqueness: { case_sensitive: false, scope: :provider }
   validates :provider, presence: true
   validate :check_if_email_can_be_blank
   validates :email, length: { maximum: 256 }, allow_blank: true,
