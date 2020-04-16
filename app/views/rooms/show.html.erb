@@ -425,13 +425,16 @@ i.fas:hover {
    
     
           <% current_user.all_rooms.each do |room| %>
+              <% if room.title == 'Home' %>
+
+              <% else %>
                 <div class="livedivide">
                     <%= link_to room do %>
                       <%= render "rooms/components/room_block", room: room %>
                     <% end %>
                   </div>
                 <% end %>
-
+            <% end %>
 
 
 
