@@ -138,7 +138,7 @@ class User < ApplicationRecord
 
 
   def all_rooms
-    Room.where.not(name: 'Home').order(Arel.sql("last_session IS NULL, last_session desc"))
+    Room.where.not(name: 'Home Room').order(Arel.sql("last_session IS NULL, last_session desc"))
   end
 
   # Retrieves a list of rooms that are shared with the user
