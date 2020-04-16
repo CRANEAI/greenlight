@@ -2,8 +2,7 @@
 
 class AddRoomLiveatColumn < ActiveRecord::Migration[5.2]
     def change
-      add_column :rooms, :live_at, :datetime, default: false
-      add_index :rooms, :live_at
+      add_column :rooms, :live_at, :datetime, null: false
     end
   end
   
