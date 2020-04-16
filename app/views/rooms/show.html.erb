@@ -411,14 +411,7 @@ i.fas:hover {
 
   <div class="col-5  radi-2">
 
-           <% current_user.all_rooms.each do |room| %>
-                  <div class="col-lg-4 col-md-6 col-sm-12">
-                    <%= link_to room do %>
-                      <%= render "rooms/components/room_block", room: room %>
-                    <% end %>
-                  </div>
-                <% end %>
-
+     
 
 
 
@@ -430,62 +423,14 @@ i.fas:hover {
    Trending Live Now
    </h3>
    
-    <div class="livedivide">
-    <div class="image" 
-    style=''
-    >
-      <span class="alert">
-      Lead Netowrk
-      </span>
-    </div>
-    <div class="des">
-      <span class="subtitle">
-      Blockchain Networking Group
-      </span>
-      <h5>@CryptoKing</h5>
-    </div>
-  </div>
-
-
-
-
-
-  <div class="livedivide">
-  <div class="image" 
-  style=''
-  >
-    <span class="alert">
-    Lead Netowrk
-    </span>
-  </div>
-  <div class="des">
-    <span class="subtitle">
-    Blockchain Networking Group
-    </span>
-    <h5>@CryptoKing</h5>
-  </div>
-</div>
-
-
-
-
-
-<div class="livedivide">
-<div class="image" 
-style=''
->
-  <span class="alert">
-  Lead Netowrk
-  </span>
-</div>
-<div class="des">
-  <span class="subtitle">
-  Blockchain Networking Group
-  </span>
-  <h5>@CryptoKing</h5>
-</div>
-</div>
-
+    
+          <% current_user.all_rooms.each do |room| %>
+                  <div class="col-lg-4 col-md-6 col-sm-12">
+                    <%= link_to room do %>
+                      <%= render "rooms/components/room_block", room: room %>
+                    <% end %>
+                  </div>
+                <% end %>
 
 
 
