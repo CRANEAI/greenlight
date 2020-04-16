@@ -136,6 +136,11 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+
+  def all_rooms
+    Room.order(Arel.sql("last_session IS NULL, last_session desc"))
+  end
+
   # Retrieves a list of rooms that are shared with the user
   def shared_rooms
     Room.where(id: shared_access.pluck(:room_id))
