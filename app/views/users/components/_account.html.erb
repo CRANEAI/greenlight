@@ -66,7 +66,7 @@
         <% if @user.image.blank? %>
           <span onClick="app.avatarme()" class="avatar avatar-xxl mr-5 mt-2 bg-primary"><%= @user.name.first %></span>
         <% else %>
-          <span class="avatar avatar-xxl mr-5 mt-2" style="background-image: url(<%= @user.image %>)"></span>
+          <span onClick="app.avatarme()" class="avatar avatar-xxl mr-5 mt-2" style="background-image: url(<%= @user.image %>)"></span>
         <% end %>
       </div>
       <div class="col-10 mt-5 hidden">
