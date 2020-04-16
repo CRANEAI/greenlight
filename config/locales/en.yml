@@ -513,7 +513,7 @@ en:
       auto: You will automatically join when it starts.
   settings:
     account:
-      fullname: Full name
+      fullname: Username
       language: Language
       provider: Provider
       image: Image
