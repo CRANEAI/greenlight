@@ -70,12 +70,12 @@ ActiveRecord::Schema.define(version: 2020_01_30_144841) do
     t.datetime "last_session"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "live_at"
     t.string "room_settings", default: "{ }"
     t.string "moderator_pw"
     t.string "attendee_pw"
     t.string "access_code"
     t.string "background"
-    t.datetime "live_at"
     t.boolean "deleted", default: false, null: false
     t.index ["bbb_id"], name: "index_rooms_on_bbb_id"
     t.index ["deleted"], name: "index_rooms_on_deleted"
