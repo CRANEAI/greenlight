@@ -160,6 +160,7 @@ button.btn.btn-lg.choosewhen.sel {
 
               <div class="form-group mt1em pickerbox">
                 <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                 <%= f.text_field: live_at, class: 'form-control datetimepicker-input'%>
                     <input name="room[live_at]" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
                     <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
