@@ -265,11 +265,6 @@ div.cardcase p {
 
 
 
-<% if @all_rooms %>
-  <h1>eoerger</h1>
-<% end %>
-
-
 
 
   <div class="col-2 radi-1">
@@ -297,6 +292,9 @@ div.cardcase p {
    <h3 class="livenow">
    Trending Live Now
    </h3>
+   
+
+
    
     <div class="livedivide">
     <div class="image" 
@@ -375,61 +373,23 @@ style=''
    Upcoming
    </h3>
    
-    <div class="livedivide">
-    <div class="image" 
-    style=''
-    >
-      <span class="alert">
-      Lead Netowrk
-      </span>
-    </div>
-    <div class="des">
-      <span class="subtitle">
-      Blockchain Networking Group
-      </span>
-      <h5>@CryptoKing</h5>
-    </div>
-  </div>
+   
 
 
 
+  <% @all_rooms.each do |room| %>
+              <% if room.name == 'Master' %>
 
-
-  <div class="livedivide">
-  <div class="image" 
-  style=''
-  >
-    <span class="alert">
-    Lead Netowrk
-    </span>
-  </div>
-  <div class="des">
-    <span class="subtitle">
-    Blockchain Networking Group
-    </span>
-    <h5>@CryptoKing</h5>
-  </div>
-</div>
-
-
-
-
-
-<div class="livedivide">
-<div class="image" 
-style=''
->
-  <span class="alert">
-  Lead Netowrk
-  </span>
-</div>
-<div class="des">
-  <span class="subtitle">
-  Blockchain Networking Group
-  </span>
-  <h5>@CryptoKing</h5>
-</div>
-</div>
+              <% else %>
+                <div class="livedivide">
+                  <% if room.sessions == 0 %>
+                    <%= link_to room do %>
+                      <%= render "rooms/components/room_block", room: room %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+            <% end %>
 
 
 
