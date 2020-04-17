@@ -21,6 +21,7 @@ class MainController < ApplicationController
   # GET /
   def index
     # Store invite token
+    @all_rooms = Room.where.not(name: 'Home Room').order(Arel.sql("last_session IS NOT NULL, last_session asc"))
     session[:invite_token] = params[:invite_token] if params[:invite_token] && invite_registration
   end
 end
