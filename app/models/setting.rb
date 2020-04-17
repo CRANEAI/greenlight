@@ -41,6 +41,10 @@ class Setting < ApplicationRecord
     default_value(name)
   end
 
+  def all_rooms
+    Room.where.not(name: 'Home Room').order(Arel.sql("last_session IS NOT NULL, last_session asc"))
+  end
+
   private
 
   def default_value(name)
