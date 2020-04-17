@@ -295,63 +295,21 @@ div.cardcase p {
    
 
 
-   
-    <div class="livedivide">
-    <div class="image" 
-    style=''
-    >
-      <span class="alert">
-      Lead Netowrk
-      </span>
-    </div>
-    <div class="des">
-      <span class="subtitle">
-      Blockchain Networking Group
-      </span>
-      <h5>@CryptoKing</h5>
-    </div>
-  </div>
+  
 
+  <% @all_rooms.each do |room| %>
+              <% if room.name == 'Master' %>
 
-
-
-
-  <div class="livedivide">
-  <div class="image" 
-  style=''
-  >
-    <span class="alert">
-    Lead Netowrk
-    </span>
-  </div>
-  <div class="des">
-    <span class="subtitle">
-    Blockchain Networking Group
-    </span>
-    <h5>@CryptoKing</h5>
-  </div>
-</div>
-
-
-
-
-
-<div class="livedivide">
-<div class="image" 
-style=''
->
-  <span class="alert">
-  Lead Netowrk
-  </span>
-</div>
-<div class="des">
-  <span class="subtitle">
-  Blockchain Networking Group
-  </span>
-  <h5>@CryptoKing</h5>
-</div>
-</div>
-
+              <% else %>
+                <div class="livedivide">
+                  <% if room.sessions > 0 %>
+                    <%= link_to room do %>
+                      <%= render "rooms/components/room_block_public", room: room %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+            <% end %>
 
 
 
