@@ -428,13 +428,15 @@ i.fas:hover {
               <% if room.name == 'Master' %>
 
               <% else %>
+               <% if room.sessions > 0 %>
                 <div class="livedivide">
-                  <% if room.sessions > 0 %>
+                 
                     <%= link_to room do %>
                       <%= render "rooms/components/room_block", room: room %>
                     <% end %>
-                    <% end %>
+                  
                   </div>
+                    <% end %>
                 <% end %>
             <% end %>
 
@@ -461,13 +463,15 @@ i.fas:hover {
               <% if room.name == 'Master' %>
 
               <% else %>
+                <% if room.sessions == 0 %>
                 <div class="livedivide">
-                  <% if room.sessions == 0 %>
+                
                     <%= link_to room do %>
                       <%= render "rooms/components/room_block", room: room %>
                     <% end %>
-                    <% end %>
+                   
                   </div>
+                   <% end %>
                 <% end %>
             <% end %>
 
