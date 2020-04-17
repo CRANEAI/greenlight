@@ -34,6 +34,9 @@ path
     <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
 
 <script src="https://mevee.herokuapp.com/mevee.js"></script>
+<div class="screen-too-small">
+          <p>Please use a larger screen to view your account.</p>
+       </div>
 <div id="app" role="document"></div>
   <audio id="remote-media" autoPlay="autoplay">
     <track kind="captions" /> {/* These captions are brought to you by eslint */}

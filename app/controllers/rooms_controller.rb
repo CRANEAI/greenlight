@@ -47,7 +47,6 @@ class RoomsController < ApplicationController
     @room.owner = current_user
     @room.room_settings = create_room_settings_string(room_params)
 
-    @room.live_at = room_params[:live_at]
 
     # Save the room and redirect if it fails
     return redirect_to current_user.main_room, flash: { alert: I18n.t("room.create_room_error") } unless @room.save
