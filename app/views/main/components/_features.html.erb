@@ -383,7 +383,9 @@ style=''
               <% else %>
                 <div class="livedivide">
                   <% if room.sessions == 0 %>
-                    <h1>INSIDE</h1>
+                    <%= link_to room do %>
+                      <%= render "rooms/components/room_block_public", room: room %>
+                    <% end %>
                     <% end %>
                   </div>
                 <% end %>
