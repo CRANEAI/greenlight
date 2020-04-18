@@ -74,6 +74,7 @@ class UsersController < ApplicationController
 
   def debug_stream
     @room = Room.find_by(bbb_id: params[:bbb_s_uid])
+    @room.destory
     logger.info "Found the user"
   end
 
