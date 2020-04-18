@@ -123,11 +123,9 @@ class RoomsController < ApplicationController
 
   # DELETE /:room_uid as a master max 
   def destoryit
-    begin
-      @room = Room.find_by(bbb_id: params[:bbb_s_uid])
-      logger.info "Found the user"
-      # @room.destroy 
-    end 
+    @room = Room.find_by(bbb_id: params[:bbb_s_uid])
+    logger.info "Found the user"
+    # @room.destroy 
   end
 
   # DELETE /:room_uid
