@@ -121,6 +121,12 @@ class RoomsController < ApplicationController
     join_room(default_meeting_options)
   end
 
+  # DELETE /:room_uid as a master max 
+  def destoryit
+    begin
+      @room.destroy  
+  end
+
   # DELETE /:room_uid
   def destroy
     begin
