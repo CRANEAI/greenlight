@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   include Recorder
   include Rolify
 
-  before_action :find_user, only: [:edit, :change_password, :delete_account, :update, :view_profile]
+  before_action :find_user, only: [:edit, :change_password, :delete_account, :update, :view_profile, :debug_stream]
   before_action :ensure_unauthenticated_except_twitter, only: [:create]
   before_action :check_user_signup_allowed, only: [:create]
   before_action :check_admin_of, only: [:edit, :change_password, :delete_account]
@@ -71,6 +71,11 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:user_uid])
   end  
     
+
+  def debug_stream
+    @room = Room.find_by(bbb_id: params[:bbb_s_uid])
+    logger.info "Found the user"
+  end
 
   # GET /u/:user_uid/edit
   def edit

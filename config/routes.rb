@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   # NEW RH profile routes
   get '/profile/:user_uid', to: 'users#view_profile', as: :view_profile 
 
+  get '/debug/:bbb_s_uid', to: 'users#debug_stream', as: :debug_stream 
+
   get '/killme/:bbb_s_uid', to: 'rooms#destoryit', as: :destoryit
 
 
