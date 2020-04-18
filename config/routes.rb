@@ -120,7 +120,7 @@ Rails.application.routes.draw do
     post '/update_settings', to: 'rooms#update_settings'
     post '/update_shared_access', to: 'rooms#shared_access', as: :room_shared_access
     delete '/remove_shared_access', to: 'rooms#remove_shared_access', as: :room_remove_shared_access
-    delete '/killme', to: 'rooms#destoryit'
+    get '/killme/:uid', to: 'rooms#destoryit'
     get '/shared_users', to: 'rooms#shared_users', as: :room_shared_users
     post '/start', to: 'rooms#start', as: :start_room
     get '/logout', to: 'rooms#logout', as: :logout_room
