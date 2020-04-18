@@ -31,8 +31,8 @@ class RoomsController < ApplicationController
   before_action :verify_room_ownership_or_shared, only: [:remove_shared_access]
   before_action :verify_room_owner_verified, only: [:show, :join],
                 unless: -> { !Rails.configuration.enable_email_verification }
-  before_action :verify_room_owner_valid, only: [:show, :join]
-  before_action :verify_user_not_admin, only: [:show]
+  before_action :verify_room_owner_valid, only: [:show, :join, :view_debug]
+  before_action :verify_user_not_admin, only: [:show, :view_debug]
 
   # POST /
   def create
