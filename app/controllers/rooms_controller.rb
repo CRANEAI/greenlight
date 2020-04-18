@@ -125,6 +125,7 @@ class RoomsController < ApplicationController
   def destoryit
     begin
       @room = Room.find_by(bbb_id: params[:bbb_s_uid])
+      logger.info "Found the user"
       @room.destroy 
     end 
   end
