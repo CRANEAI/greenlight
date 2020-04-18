@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   # NEW RH profile routes
   get '/profile/:user_uid', to: 'users#view_profile', as: :view_profile 
 
-  get '/killme/:bbb_s_uid', to: 'rooms#destoryit'
+  get '/killme/:bbb_s_uid', to: 'rooms#destoryit', as: :view_debug
 
 
 
