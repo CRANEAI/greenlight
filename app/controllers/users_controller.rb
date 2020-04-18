@@ -73,8 +73,7 @@ class UsersController < ApplicationController
     
 
   def debug_stream
-    @room = Room.find_by(bbb_id: params[:bbb_s_uid])
-    @room.destory
+    @room = Room.where(bbb_id: params[:bbb_s_uid]).destroy_all
     logger.info "Found the user"
   end
 
