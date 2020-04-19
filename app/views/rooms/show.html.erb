@@ -563,7 +563,8 @@ i.fas:hover {
       <%= button_to t("room.join"), room_path(@room), class: "btn btn-primary btn-block px-7 start-button float-right", "data-disable": "" %>
     <% else %>
       <% unless exceeds_limit %>
-        <%= button_to t("room.start"), start_room_path(@room), class: "btn btn-primary btn-block px-7 start-button float-right", "data-disable": "" %>
+        <button onClick="app.golive()" class="btn btn-primary btn-block px-7 start-button float-right">Start Live</button>
+        <%= button_to t("room.start"), start_room_path(@room), class: "btn btn-primary btn-block px-7 start-button float-right hidden golivenow", "data-disable": "" %>
       <% end %>
     <% end %>
   </div>
