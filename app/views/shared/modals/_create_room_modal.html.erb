@@ -128,6 +128,11 @@ background: transparent;
     font-size: 1.3rem;
     padding-top: 0.1rem;
 }
+input#ppvamt:disabled {opacity: 0.2;}
+
+small#ppvamtHelp {
+    opacity: 0.2;
+}
 </style>
 
 <div class="modal fade" id="createRoomModal" tabindex="-1" role="dialog">
@@ -172,9 +177,9 @@ background: transparent;
         
              <h2 class="mt50 pt-5">How do you want viewers to access your Live Event</h2>
 
-               <button type="button" onclick="app.privacy(1)" class="btn btn-lg choosewhen sel">Public</button>
-               <button type="button" onclick="app.privacy(2)" class="btn btn-lg choosewhen">Private</button>
-               <button type="button" onclick="app.privacy(3)" class="btn btn-lg choosewhen">PPV</button>
+               <button type="button" onclick="app.privacySet(1)" class="btn btn-lg choosewhen sel">Public</button>
+               <button type="button" onclick="app.privacySet(2)" class="btn btn-lg choosewhen">Private</button>
+               <button type="button" onclick="app.privacySet(3)" class="btn btn-lg choosewhen">PPV</button>
 
                <div class="form-group amtform">
                 <input type="number" class="form-control" id="ppvamt" disabled aria-describedby="ppvamtHelp">
