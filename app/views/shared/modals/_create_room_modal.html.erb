@@ -145,6 +145,15 @@ input#ppvamt:disabled {opacity: 0.2;}
 small#ppvamtHelp {
     opacity: 0.2;
 }
+div#v-pills-tab a {
+    margin: auto;
+    background: none;
+    color: #5f6576 !important;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+div#v-pills-tab a.show {color: #fff !important;}
 </style>
 
 <div class="modal fade" id="createRoomModal" tabindex="-1" role="dialog">
@@ -182,17 +191,15 @@ small#ppvamtHelp {
       <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Advanced</a>
     </div>
   </div>
+
+
   <div class="col-12">
     <div class="tab-content" id="v-pills-tabContent">
-       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">123</div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">456</div>
-    </div>
-  </div>
-</div>
-
- 
       
-          <div class="fu">
+      
+       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+
+        <div class="fu">
             <input type="file" id="aviup" onchange="app.onFileUploadBanner(this)">
             <p>Upload an image to appear as your event banner</p>
           </div>
@@ -206,8 +213,46 @@ small#ppvamtHelp {
               <div class="invalid-feedback text-left"><%= t("modal.create_room.not_blank") %></div>
             </div>
 
-  
-           <h2 class="mt50 pt-5">Sponsorship Customization</h2>
+
+
+             <h2 class="mt-0 pt-3">When do you want to start you Live Event</h2>
+
+             <button type="button" onclick="app.toggle(2)" class="btn btn-lg choosewhen sel">Now</button>
+               <button type="button" onclick="app.toggle(1)" class="btn btn-lg choosewhen">At a Scheduled Time</button>
+
+
+              <div class="form-group mt1em pickerbox">
+                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                    <input name="room[live_at]" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+
+
+           
+
+            <div class="input-icon mb-2 hidden">
+              <span onclick="generateAccessCode()" class="input-icon-addon allow-icon-click cursor-pointer">
+                <i class="fas fa-dice"></i>
+              </span>
+              <%= f.label :access_code, t("modal.create_room.access_code_placeholder"), id: "create-room-access-code", class: "form-control" %>
+              <%= f.hidden_field :access_code %>
+              <span onclick="ResetAccessCode()" class="input-icon-addon allow-icon-click cursor-pointer">
+                <i class="far fa-trash-alt"></i>
+              </span>
+            </div>
+
+
+            
+
+       </div>
+      
+      
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+
+       <h2 class="mt50 pt-5">Sponsorship Customization</h2>
 
             <div class="row">
               <div class="col-4">
@@ -249,35 +294,24 @@ small#ppvamtHelp {
                 <small id="ppvamtHelp" class="form-text text-muted">Set the amount.</small>
               </div>
 
-
-             <h2 class="mt-0 pt-3">When do you want to start you Live Event</h2>
-
-             <button type="button" onclick="app.toggle(2)" class="btn btn-lg choosewhen sel">Now</button>
-               <button type="button" onclick="app.toggle(1)" class="btn btn-lg choosewhen">At a Scheduled Time</button>
+      </div>
 
 
-              <div class="form-group mt1em pickerbox">
-                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-                    <input name="room[live_at]" type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
-                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                    </div>
-                </div>
-            </div>
+    </div>
+  </div>
 
 
-           
 
-            <div class="input-icon mb-2 hidden">
-              <span onclick="generateAccessCode()" class="input-icon-addon allow-icon-click cursor-pointer">
-                <i class="fas fa-dice"></i>
-              </span>
-              <%= f.label :access_code, t("modal.create_room.access_code_placeholder"), id: "create-room-access-code", class: "form-control" %>
-              <%= f.hidden_field :access_code %>
-              <span onclick="ResetAccessCode()" class="input-icon-addon allow-icon-click cursor-pointer">
-                <i class="far fa-trash-alt"></i>
-              </span>
-            </div>
+</div>
+
+ 
+      
+         
+  
+          
+
+
+            
 
 
             <div class="hidden">
