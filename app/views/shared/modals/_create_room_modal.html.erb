@@ -186,9 +186,34 @@ small#ppvamtHelp {
             </div>
 
   
-           <h2 class="mt50 pt-5">Sponsorship Opportunities</h2>
+           <h2 class="mt50 pt-5">Sponsorship Customization</h2>
 
-            
+            <div class="row">
+              <div class="col-4">
+                 <div class="fu">
+                  <input type="file" id="aviup" onchange="app.onFileUploadBanner(this)">
+                  <p>Upload Step & Repeat</p>
+                </div>
+              </div>
+              <div class="col-4">
+                 <div class="fu">
+                  <input type="file" id="aviup" onchange="app.onFileUploadBanner(this)">
+                  <p>Upload Sponsor Logo</p>
+                </div>
+              </div>
+              <div class="col-4">
+                   <div class="form-group amtform">
+                    <input type="text" placeholder="$0.00 Ticket Amount" onkeypress="app.formatMoneyBlock()" class="form-control" id="addcta" disabled aria-describedby="addctaHelp">
+                    <small id="addctaHelp" class="form-text text-muted">CTA for Ad.</small>
+                  </div>
+                   <div class="form-group amtform">
+                    <input type="text" placeholder="$0.00 Ticket Amount" onkeypress="app.formatMoneyBlock()" class="form-control" id="linkcta" disabled aria-describedby="linkctaHelp">
+                    <small id="linkctaHelp" class="form-text text-muted">URL to Link</small>
+                  </div>
+                  
+              </div>
+              
+            </div>
 
         
              <h2 class="mt50 pt-5">How do you want viewers to access your Live Event</h2>
