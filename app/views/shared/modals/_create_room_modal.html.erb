@@ -147,7 +147,7 @@ button.btn.btn-lg.choosewhen.sel {
 
 
           <%= form_for(:room, url: rooms_path) do |f| %>
-            <h2>What are you going to talk about?</h2>
+            <h2>What are you calling the Live Event?</h2>
             <div class="input-icon mb-2">
             
               <%= f.text_field :name, id: "create-room-name", class: "form-control text-center", value: "", placeholder: t("modal.create_room.name_placeholder"), autocomplete: :off %>
@@ -158,9 +158,22 @@ button.btn.btn-lg.choosewhen.sel {
         
              <h2 class="mt50 pt-5">How do you want viewers to access your Live Event</h2>
 
-               <button type="button" onclick="app.toggle(2)" class="btn btn-lg choosewhen sel">Public</button>
-               <button type="button" onclick="app.toggle(1)" class="btn btn-lg choosewhen">Private</button>
-               <button type="button" onclick="app.toggle(1)" class="btn btn-lg choosewhen">PPV</button>
+               <button type="button" onclick="app.privacy(1)" class="btn btn-lg choosewhen sel">Public</button>
+               <button type="button" onclick="app.privacy(2)" class="btn btn-lg choosewhen">Private</button>
+               <button type="button" onclick="app.privacy(3)" class="btn btn-lg choosewhen">PPV</button>
+
+                <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+
 
              <h2 class="mt-5 pt-5">When do you want to start you Live Event</h2>
 
