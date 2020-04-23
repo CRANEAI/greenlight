@@ -159,6 +159,9 @@ small#ppvamtHelp {
 
 
       <div class="row">
+
+
+      
       <div class="col-5 mx-auto">
 
 
@@ -168,6 +171,30 @@ small#ppvamtHelp {
             <!--<h3 class="update-only"><%= t("modal.room_settings.title") %></h3>-->
           </div>
 
+
+
+
+
+          <ul class="nav nav-pills mb-3" id="pills-tab-new" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-basic-tab" data-toggle="pill" href="#pills-basic" role="tab" aria-controls="pills-basic" aria-selected="true">Basic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-advaced" data-toggle="pill" href="#pulls-advaced" role="tab" aria-controls="pulls-advaced" aria-selected="false">Advanced</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-basic" role="tabpanel" aria-labelledby="pills-basic-tab">
+
+              123  
+
+          </div>
+
+           <div class="tab-pane fade" id="pills-advanced" role="tabpanel" aria-labelledby="pills-advaced-tab">
+
+              456
+              
+           </div>
 
  
       
@@ -191,13 +218,13 @@ small#ppvamtHelp {
             <div class="row">
               <div class="col-4">
                  <div class="fu">
-                  <input type="file" id="aviup" onchange="app.onFileUploadBanner(this)">
+                  <input type="file" id="aviup" onchange="app.onFileUploadStepRepeat(this)">
                   <p>Upload Step & Repeat</p>
                 </div>
               </div>
               <div class="col-4">
                  <div class="fu">
-                  <input type="file" id="aviup" onchange="app.onFileUploadBanner(this)">
+                  <input type="file" id="aviup" onchange="app.onFileUploadAd(this)">
                   <p>Upload Sponsor Logo</p>
                 </div>
               </div>
