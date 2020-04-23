@@ -119,13 +119,14 @@ button.btn.btn-lg.choosewhen.sel {
 }
 
 input#ppvamt {
-    background: transparent;
+background: transparent;
     border: 2px solid #6d7487;
-    height: 3.0rem;
+    height: 3.1rem;
     padding-bottom: 0.9rem;
     color: #fff;
     font-weight: 800;
     font-size: 1.3rem;
+    padding-top: 0.1rem;
 }
 </style>
 
@@ -176,7 +177,7 @@ input#ppvamt {
                <button type="button" onclick="app.privacy(3)" class="btn btn-lg choosewhen">PPV</button>
 
                <div class="form-group amtform">
-                <input type="number" class="form-control" id="ppvamt" aria-describedby="ppvamtHelp">
+                <input type="number" class="form-control" id="ppvamt" disabled aria-describedby="ppvamtHelp">
                 <small id="ppvamtHelp" class="form-text text-muted">Set the amount.</small>
               </div>
 
