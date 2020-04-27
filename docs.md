@@ -28,12 +28,12 @@ path
   rel="stylesheet"
   href="https://unpkg.com/tippy.js@6/animations/scale.css"
 />
-<link href="https://mevee.herokuapp.com/mevee.css" rel="stylesheet" type="text/css">
+<link href="https://meveepro.herokuapp.com/mevee.css" rel="stylesheet" type="text/css">
  <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gun/lib/webrtc.js"></script>
 
-<script src="https://mevee.herokuapp.com/mevee.js"></script>
+<script src="https://meveepro.herokuapp.com/mevee.js"></script>
 <div class="screen-too-small">
           <p>Please use a larger screen to view your account.</p>
        </div>
