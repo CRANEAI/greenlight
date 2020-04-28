@@ -39,8 +39,8 @@
     <% current_user_role = current_user.highest_priority_role %>
     <br>
     <br>
-    <%= f.label t("settings.account.roles"), class: "form-label" %>
-    <div id="role-tag-container" class="tags mb-1">
+    <%= f.label t("settings.account.roles"), class: "form-label hidden" %>
+    <div id="role-tag-container hidden" class="tags mb-1">
       <% @user.roles.by_priority.each do |role| %>
         <span id="<%= "user-role-tag_#{role.id}" %>" style="<%= "background-color: #{role_colour(role)};border-color: #{role_colour(role)};" %>" class="tag user-role-tag">
           <%= translated_role_name(role) %>
