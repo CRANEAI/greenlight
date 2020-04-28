@@ -1,0 +1,233 @@
+<%
+# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/.
+# Copyright (c) 2018 BigBlueButton Inc. and by respective authors (see below).
+# This program is free software; you can redistribute it and/or modify it under the
+# terms of the GNU Lesser General Public License as published by the Free Software
+# Foundation; either version 3.0 of the License, or (at your option) any later
+# version.
+#
+# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+# You should have received a copy of the GNU Lesser General Public License along
+# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
+%>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <% if Rails.configuration.google_analytics %>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="<%= google_analytics_url %>"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "<%= ENV["GOOGLE_ANALYTICS_TRACKING_ID"] %>");
+      </script>
+    <% end %>
+
+    <title>Mevee Pro - Network and meet people in a secure live stream group</title>
+    <meta property="og:title" content="MeveePro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The Networking Place for Professionals" />
+    <meta property="og:url" content="<%= request.base_url %>" />
+    
+
+    <meta property="og:image" content="<%= logo_image %>" />
+
+    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <%= csrf_meta_tags %>
+
+    <!-- Global javascript variables and helpers. -->
+    <script type="text/javascript">
+      window.GreenLight = {};
+      window.GreenLight.WEBSOCKET_HOST = "<%= ENV['WEBSOCKET_HOST'] %>"
+      window.GreenLight.RELATIVE_ROOT = "<%= relative_root %>"
+    </script>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Primary color styling -->
+    <%= stylesheet_link_tag themes_primary_path %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/tippy.js@6/animations/scale.css"
+/>
+    <script src="https://kit.fontawesome.com/4e6a5c132f.js" crossorigin="anonymous"></script>
+
+
+    <link rel="icon" 
+      href="https://www.meveepro.com/favicon.ico">
+      
+    <style>
+    body{
+      max-width: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+        h1#main-text {
+          font-family: sofia-pro, sans-serif;
+          font-weight: 900;
+          font-size: 4.5rem;
+          color: #fff;
+          max-width: 100%;
+          margin: auto;
+    }
+    p.lead.col-lg-8.col-sm-12 {
+      font-family: sofia-pro, sans-serif;
+      font-weight: 400;
+      color: #fff;
+      font-size: 1.9rem;
+      width: 90%;
+      margin: auto;
+      max-width: 100%;
+      margin-left: 0;
+  }
+    .background.launchhome {
+        background: #000;
+    }
+    .btn-outline-primary {
+      border-color: #000 !important;
+      color: #ffffff !important;
+      background: linear-gradient(140.88deg,#0057ff 1.17%,#0057ff 88.49%);
+      font-size: 1.2rem;
+      padding: 7px 31px;
+      border-radius: 25px;
+  }
+  img.header-brand-img {
+    height: 3.5rem;
+    padding-top: 7px;
+}
+  input.start-button {
+    background: linear-gradient(140.88deg,#0057ff 1.17%,#0057ff 88.49%);
+    border-radius: 35px;
+}
+div#room_block_container {
+   
+}
+  .hidden{
+    display:none;
+  }
+  .blew-up {
+    width: 143%;
+    margin-left: -23%;
+    margin-top: 6rem;
+}
+.screenshot {
+    --transform: rotate3d(0.5,-0.866,0,19deg) !important;
+    --shadow: 34.3px 62.5px 125px -25px rgba(50,50,93,.5),20.6px 37.5px 75px -37.5px rgba(0,0,0,.6);
+    --lighting-angle: 300deg;
+    margin: -40px 100px 0px 49px;
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+}
+.screenshot {
+    display: block;
+}
+.screenshot .image-container {
+    border-radius: 8px;
+    -webkit-transform: var(--transform);
+    transform: var(--transform);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+.round-investors img {
+    border-radius: 10px;
+}
+.screenshot .image-container:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: -webkit-gradient(linear,left top,left bottom,from(var(--lighting-angle)),color-stop(hsla(0,0%,100%,0)),to(hsla(0,0%,100%,.35)));
+    background: linear-gradient(var(--lighting-angle),hsla(0,0%,100%,0),hsla(0,0%,100%,.35));
+    border-radius: 8px;
+}
+.accordion-preview {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 15px);
+    width: calc(100% - 15px);
+    z-index: 10;
+}
+.pt-5x {
+  padding-top: 7rem;
+  margin-bottom: 10rem;
+  padding-bottom: 5rem;
+}
+.header .header-nav.active {
+    color: #0057ff !important;
+}
+    </style>
+
+    <script type="text/javascript">
+      // Include the correct translated strings for Javascript
+      window.I18n = <%= current_translations.to_json.html_safe %>
+      window.I18nFallback = <%= fallback_translations.to_json.html_safe %>
+    </script>
+  </head>
+
+  <body class="app-background" data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>" data-relative-root="<%= Rails.configuration.relative_url_root || "/" %>">
+    <%= render "shared/header" %>
+
+    <div class="wrapper">
+      <% if bigbluebutton_endpoint_default? %>
+        <div class="alert alert-icon alert-danger text-center mb-0">
+          <div class="flash alert d-inline">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p class="d-inline"><%= t("test_install",
+              href: link_to(t("docs").downcase, "http://docs.bigbluebutton.org/install/greenlight-v2.html#2-install-greenlight", target: "_blank", rel: "noopener")
+            ).html_safe %>
+          </div>
+        </div>
+      <% end %>
+
+      <% unless Rails.configuration.banner_message.blank? %>
+        <div class="alert alert-icon alert-danger text-center mb-0">
+          <div class="flash alert d-inline">
+            <p class="d-inline"><%= Rails.configuration.banner_message %></p>
+          </div>
+        </div>
+      <% end %>
+
+      <%= render 'shared/flash_messages' unless flash.empty? %>
+
+      <%= yield %>
+    </div>
+
+    <%= render "shared/footer" %>
+
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.4.1/accounting.min.js"></script>
+
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://meveepro.herokuapp.com/vuep.js"></script>
+<script src="https://meveepro.herokuapp.com/utils.js"></script>
+<script src="https://meveepro.herokuapp.com/index.js"></script>
+
+
+  </body>
+</html>
