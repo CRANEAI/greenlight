@@ -16,6 +16,11 @@
 <%= render 'rooms/components/room_event', render_recordings: true do %>
   <div class="row">
     <div class="col-9">
+
+
+      <button onclick="app.rsvp()" id="rsvp">Notify me when it's live</a>
+  <p class="rsvpmsg"></p>
+
       <h3><%= t("room.wait.message") %></h3>
       <h4 class="text-muted"><%= t("room.wait.auto") %></h4>
     </div>
